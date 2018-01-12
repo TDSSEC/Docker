@@ -8,11 +8,17 @@ RUN apt-get update && \
     python-dev \
     python3-pip \	
     python3-dev \
-    python-pycurl \ 
+    python-pycurl  
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan
 WORKDIR /opt
 RUN pip install -r /opt/xsscrapy/requirements.txt
-RUN pip install bs4 \
-	beautifulsoup
-ENTRYPOINT ["/bin/sh"]
+RUN pip install \ 
+	cryptography \
+	pyopenssl \
+	beautifulsoup \
+	requests
+RUN pip3 install \
+	beautifulsoup4 \
+	requests
+ENTRYPOINT ["/bin/bash"]
