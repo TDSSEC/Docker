@@ -5,6 +5,6 @@ RUN apt-get update && \
     zsh \
     git
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
-    git clone git clone https://github.com/AzizDammak/DorkScan ~/DorkScan
+    git clone https://github.com/AzizDammak/DorkScan ~/DorkScan
 WORKDIR /opt
 ENTRYPOINT ["/bin/zsh"]
