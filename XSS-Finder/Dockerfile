@@ -13,4 +13,5 @@ RUN apt-get update && \
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan
 WORKDIR /opt
+RUN pip install -r /opt/xsscrapy/requirements.txt
 ENTRYPOINT ["/bin/zsh"]
