@@ -17,8 +17,15 @@ RUN pip install \
 	cryptography \
 	pyopenssl \
 	beautifulsoup \
-	requests
+	requests \
+	pyopenssl \
+	scrapy \
+	lxml \
+	twisted \ 
+	w3lib 
 RUN pip3 install \
 	beautifulsoup4 \
-	requests
+	requests \
+	docopt \ 
+	bs4
 ENTRYPOINT ["/bin/bash"]
