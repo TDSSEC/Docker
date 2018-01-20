@@ -8,24 +8,32 @@ RUN apt-get update && \
     python-dev \
     python3-pip \	
     python3-dev \
-    python-pycurl  
+    python-pycurl \
+    curl \ 
+    libssl-dev \
+    libcurl4-openssl-dev 
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan
 WORKDIR /opt
-RUN pip install -r /opt/xsscrapy/requirements.txt
 RUN pip install \ 
 	cryptography \
 	pyopenssl \
 	beautifulsoup \
 	requests \
 	pyopenssl \
-	scrapy \
+	Scrapy==1.1.0rc3 \
+	pybloom==1.1 \
 	lxml \
-	twisted \ 
-	w3lib 
+	Twisted==16.6.0 \ 
+	w3lib \ 
+	six \ 
+	cssselect \ 
+	queuelib
 RUN pip3 install \
 	beautifulsoup4 \
 	requests \
 	docopt \ 
-	bs4
+	bs4 \
+	pyaml \
+	urllib3
 ENTRYPOINT ["/bin/bash"]
