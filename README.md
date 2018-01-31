@@ -10,6 +10,9 @@ https://github.com/DanMcInerney/xsscrapy
 https://github.com/AzizDammak/DorkScan
 ```
 
+#### customScanner.py
+I have added a custom script on 31/01/18 - Auto-runs both DorkScan and xsscrapy... Saves time!
+
 #### Python Scrapy Package Details and Dependencies  
 https://pypi.python.org/pypi/Scrapy  
 Overview   
