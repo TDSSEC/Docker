@@ -1,12 +1,12 @@
 #!/bin/bash
-## Customer Scanner v1.0
+## Custom Scanner v1.2
 ## This allows you to enter the Dork you wish to run, and number of pages to run.
 ## It then automatically starts scanning all urls obtained through XSSCRAPY.py
 ## Run this from the XSScrapy Dir!
 
 echo "Please enter the Google Dork you wish to use: "
 read dork
-echo "How many google pages to sieve through?: "
+echo "How many google pages to sift through?: "
 read num
 
 echo "Running Dork Scan..."
