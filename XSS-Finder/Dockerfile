@@ -3,6 +3,8 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
     git \
+    wget \
+    vim \
     locales \
     python-pip \
     python-dev \
@@ -13,7 +15,8 @@ RUN apt-get update && \
     libssl-dev \
     libcurl4-openssl-dev
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
-    git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan
+    git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan && \
+    wget https://raw.githubusercontent.com/tomsqr94/Docker/master/XSS-Finder/customScanner.sh -P /opt/
 WORKDIR /opt
 RUN pip install \
     asn1crypto==0.24.0 \
