@@ -1,18 +1,28 @@
 #!/bin/bash
-## Custom Scanner v1.2
+## Custom Scanner v2.0
 ## This allows you to enter the Dork you wish to run, and number of pages to run.
 ## It then automatically starts scanning all urls obtained through XSSCRAPY.py
 ## Run this from the XSScrapy Dir!
 
-echo "Please enter the Google Dork you wish to use: "
-read dork
-echo "How many google pages to sift through?: "
-read num
+read -p "[?] Google Dork to use: " dork
+read -p "[?] No. of Google pages to sift through: " num
 
-echo "Running Dork Scan..."
+echo "\n [+] Running Dork Scan... \n"
 python3 /opt/DorkScan/scanner.py $dork $num > /opt/xsscrapy/urls.txt
+echo "\n[+] Scan completed and outputted to urls.txt in /opt/xsscrapy/ Directory \n"
 
-echo "Scan completed and outputted to urls.txt in /opt/xsscrapy/ Directory"
+lines=cat /opt/xsscrapy/urls.txt | wc -l
+echo "[+] There was a Total of $lines URls obtained"
+pause "Press [Enter] key to start scanning the URLs \n"
 
-echo "Scanning the list of URL's with xsscrapy now"
-for i in $(cat /opt/xsscrapy/urls.txt); do python xsscrapy.py -u $i; done
+echo "[+] Scanning the list of URL's with xsscrapy now \n"
+for i in $(cat /opt/xsscrapy/urls.txt)
+do 
+    python xsscrapy.py -u $i
+done
+
+echo "\n[+] Opening the results in a pager\n"
+for t in $(cat /opt/xsscrapy/*.txt)
+do
+    less $t
+done
