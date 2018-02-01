@@ -16,8 +16,9 @@ RUN apt-get update && \
     libcurl4-openssl-dev
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan && \
-    wget https://raw.githubusercontent.com/tomsqr94/Docker/master/XSS-Finder/customScanner.sh -P /opt/
-WORKDIR /opt
+    wget https://raw.githubusercontent.com/tomsqr94/Docker/master/XSS-Finder/customScanner.sh -P /opt/xsscrapy/
+RUN chmod +x /opt/xsscrapy/customScanner.sh
+WORKDIR /opt/xsscrapy/
 RUN pip install \
     asn1crypto==0.24.0 \
     attrs==17.4.0 \
@@ -114,4 +115,4 @@ RUN pip3 install \
     tldextract==2.2.0 \
     urllib3==1.22 \
     websocket-client==0.44.0 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/opt/xsscrapy/customScanner.sh"]
