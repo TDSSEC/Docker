@@ -22,7 +22,7 @@ do
 done
 
 echo "\n[+] Opening the results in a pager\n"
-for t in $(find /opt/xsscrapy -name '*.txt'); do less $t; done
+for t in $(find /opt/xsscrapy -name '*.txt')
 do
     less $t
 done
