@@ -1,8 +1,9 @@
 #!/bin/bash
-## Custom Scanner v2.2
+## Custom Scanner v2.3
 ## This allows you to enter the Dork you wish to run and number of pages to run.
 ## It then automatically starts scanning all urls obtained through XSSCRAPY.py
 
+rm /opt/xsscrapy/requirements.txt
 read -p "[?] Google Dork to use: " dork
 read -p "[?] No. of Google pages to sift through: " num
 
@@ -21,7 +22,7 @@ do
 done
 
 echo "\n[+] Opening the results in a pager\n"
-for t in $(cat /opt/xsscrapy/*.txt)
+for t in $(find /opt/xsscrapy -name '*.txt'); do less $t; done
 do
     less $t
 done
