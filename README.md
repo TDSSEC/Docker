@@ -1,7 +1,7 @@
 # DockerImages
 
 Various Docker images I have created...  
-More info can be found in the README files 
+More info can be found in the **README** files in the respective directories above.
 
 ## XSS-Finder
 Utilises xsscrapy script and an automated dork scanner (DorkScan) to help find XSS.  
