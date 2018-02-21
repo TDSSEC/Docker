@@ -16,6 +16,7 @@ RUN apt-get update && \
     libcurl4-openssl-dev
 RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan && \
+    wget https://raw.githubusercontent.com/tomsqr94/Useful-Files/master/.vimrc -P /root/ && \
     wget https://raw.githubusercontent.com/tomsqr94/Docker/master/XSS-Finder/customScanner.sh -P /opt/xsscrapy/
 RUN chmod +x /opt/xsscrapy/customScanner.sh
 WORKDIR /opt/xsscrapy/
