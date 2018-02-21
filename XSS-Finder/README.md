@@ -3,7 +3,7 @@ This has a script that combines the power of **DorkScan** to help find potential
 Not only this, but after the sites have been crawled and tested, it will display 1 by 1 the contents of each file so that you may see the links where websites are vulnerable.  
 
 ## How to use
-The image instantly takes you into the script I have created called **customScanner.py**  
+The image instantly takes you into the script I have created called **customScanner.sh**  
 It will ask the following questions which are self-explanatory:  
 ```
 1. The Google Dork you wish to use:
