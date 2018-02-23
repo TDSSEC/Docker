@@ -9,3 +9,8 @@ Easy to use and will find many XSS vulnerabilties from vulnerable sites
 
 ## Kali Linux
 As the Title suggests, it's Kali Linux base Docker image with additional packages and github Tools ready to go.
+
+## OSINT
+This uses spiderfoot to perform OSINT.  
+Requires you to pass the spiderfoot directory on your local machine into the docker container.  
+Why? You can then use your API keys without having them stored publically on GitHub... :)
