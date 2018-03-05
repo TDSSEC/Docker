@@ -3,7 +3,6 @@
 ## This allows you to enter the Dork you wish to run and number of pages to run.
 ## It then automatically starts scanning all urls obtained through XSSCRAPY.py
 
-rm /opt/xsscrapy/requirements.txt
 read -p "[?] Google Dork to use: " dork
 read -p "[?] No. of Google pages to sift through: " num
 
