@@ -18,7 +18,7 @@ RUN git clone https://github.com/DanMcInerney/xsscrapy /opt/xsscrapy && \
     git clone https://github.com/AzizDammak/DorkScan /opt/DorkScan && \
     wget https://raw.githubusercontent.com/tomsqr94/Useful-Files/master/.vimrc -P /root/ && \
     wget https://raw.githubusercontent.com/tomsqr94/Docker/master/XSS-Finder/customScanner.sh -P /opt/xsscrapy/
-RUN chmod +x /opt/xsscrapy/customScanner.sh
+RUN chmod +x /opt/xsscrapy/customScanner.sh && rm /opt/xsscrapy/requirements.txt
 WORKDIR /opt/xsscrapy/
 RUN pip install \
     asn1crypto==0.24.0 \
